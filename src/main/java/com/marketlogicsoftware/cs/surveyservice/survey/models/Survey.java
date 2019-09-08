@@ -7,6 +7,14 @@ public class Survey {
     private String description;
     private List<Question> questions;
 
+    public Survey() {
+    }
+
+    public Survey(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
+
     public String getName() {
         return name;
     }

@@ -1,0 +1,17 @@
+spring:
+  profiles:
+      active: "dev"
+
+server:
+  servlet:
+    contextPath: /api
+  port: 8080
+
+---
+
+spring:
+  profiles: dev
+app:
+  db:
+    name: survey
+    host: localhost
