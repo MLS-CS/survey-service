@@ -29,7 +29,6 @@ public class SurveyRepository {
         this.mongoTemplate.findAndModify(
                 Query.query(Criteria.where("_id").is(id)),
                 new Update().set("survey", survey),
-                FindAndModifyOptions.options().returnNew(true),
                 SurveyDocument.class
         );
     }

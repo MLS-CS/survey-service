@@ -15,3 +15,14 @@ app:
   db:
     name: survey
     host: localhost
+
+
+---
+
+spring:
+  profiles: prod
+app:
+  db:
+    name: survey
+    host: localhost
+    port: 27017

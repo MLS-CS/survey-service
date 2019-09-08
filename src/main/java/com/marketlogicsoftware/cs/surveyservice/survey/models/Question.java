@@ -5,9 +5,17 @@ import java.util.List;
 public class Question {
     private String id;
     private String description;
-    private String cateory;
+    private String category;
     private AnswerType answerType;
     private List<Answer> answers;
+
+    public Question(){}
+
+    public Question(String description, String category, AnswerType answerType) {
+        this.description = description;
+        this.category = category;
+        this.answerType = answerType;
+    }
 
     public String getId() {
         return id;
@@ -21,8 +29,8 @@ public class Question {
         return description;
     }
 
-    public String getCateory() {
-        return cateory;
+    public String getCategory() {
+        return category;
     }
 
     public AnswerType getAnswerType() {
