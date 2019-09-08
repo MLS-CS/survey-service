@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.net.URI;
 
 @RestController
@@ -15,7 +16,7 @@ public class AnswerController {
     private AnswerService answerService;
 
     @PostMapping()
-    public ResponseEntity<?> createAnswer(@PathVariable("surveyId") String surveyId, @PathVariable("questionId") String questionId, @RequestBody Answer answer) {
+    public ResponseEntity<?> createAnswer(@PathVariable("surveyId") String surveyId, @PathVariable("questionId") String questionId, @Valid @RequestBody Answer answer) {
         URI uri = ServletUriComponentsBuilder
                 .fromCurrentRequest()
                 .path("/{id}")
@@ -31,7 +32,7 @@ public class AnswerController {
     }
 
     @PutMapping("/{id}")
-    public void updateAnswer(@PathVariable("surveyId") String surveyId, @PathVariable("questionId") String questionId, @PathVariable("id") String id, @RequestBody Answer answer) {
+    public void updateAnswer(@PathVariable("surveyId") String surveyId, @PathVariable("questionId") String questionId, @PathVariable("id") String id, @Valid @RequestBody Answer answer) {
         answerService.updateAnswer(surveyId, questionId, id, answer);
     }
 

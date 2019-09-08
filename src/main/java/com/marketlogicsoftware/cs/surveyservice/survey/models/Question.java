@@ -1,12 +1,20 @@
 package com.marketlogicsoftware.cs.surveyservice.survey.models;
 
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 public class Question {
     private String id;
+
+    @NotNull
     private String description;
+
+    @NotNull
     private String category;
+
+    @NotNull
     private AnswerType answerType;
+
     private List<Answer> answers;
 
     public Question(){}

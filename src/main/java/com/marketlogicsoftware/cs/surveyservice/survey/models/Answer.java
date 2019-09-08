@@ -1,7 +1,11 @@
 package com.marketlogicsoftware.cs.surveyservice.survey.models;
 
+import javax.validation.constraints.NotNull;
+
 public class Answer {
     private String id;
+
+    @NotNull
     private String description;
 
     public Answer(){}
