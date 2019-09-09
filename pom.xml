@@ -67,7 +67,7 @@
 		<profile>
 			<id>ci</id>
 			<properties>
-				<docker.image.prefix>anantpawar</docker.image.prefix>
+				<docker.image.prefix>mlscs</docker.image.prefix>
 				<sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
 			</properties>
 			<build>
