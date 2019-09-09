@@ -111,51 +111,51 @@ This service provides apis to manage survey and support following features :
          200
          ```
          
-    * Create Answer 
-      * Request URL : http://localhost:8082/api/survey/{surveyId}/question/{questionId}/answer
-      * Request Body:
-          ```
+   * Create Answer 
+     * Request URL : http://localhost:8082/api/survey/{surveyId}/question/{questionId}/answer
+     * Request Body:
+         ```
           {
              "description": "Yes"
           }
-          ```
-       * Response Header:
-            ```
+         ```
+      * Response Header:
+           ```
             Location : http://localhost:8082/api/survey/{surveyId}/question/{questionId}/answer/{answerId}
-            ```
-       * Response Status:
-            ```
-             201
-            ```      
+           ```
+      * Response Status:
+           ```
+            201
+           ```      
                    
-    * Update Answer 
-      * Request URL : http://localhost:8082/api/survey/{surveyId}/question/{questionId}/answer/{answerId} 
-      * Request Body:
-           ```
-           {
-               "description": "Yes"
-           }
-           ```
-       * Response Status:
-           ```
-           200
-           ```  
-               
-    * Retrieve Answer 
-      * Request URL : http://localhost:8082/api/survey/{surveyId}/question/{questionId}/answer/{answerId}
-      * Response Body:
+   * Update Answer 
+     * Request URL : http://localhost:8082/api/survey/{surveyId}/question/{questionId}/answer/{answerId} 
+     * Request Body:
           ```
           {
               "description": "Yes"
           }
           ```
-               
-    * Delete Answer 
-      * Request URL : http://localhost:8082/api/survey/{surveyId}/question/{questionId}/answer/{answerId}
       * Response Status:
           ```
-           200
-          ```
+          200
+          ```  
+               
+   * Retrieve Answer 
+     * Request URL : http://localhost:8082/api/survey/{surveyId}/question/{questionId}/answer/{answerId}
+     * Response Body:
+         ```
+         {
+             "description": "Yes"
+         }
+         ```
+               
+   * Delete Answer 
+     * Request URL : http://localhost:8082/api/survey/{surveyId}/question/{questionId}/answer/{answerId}
+     * Response Status:
+         ```
+          200
+         ```
           
 **Publish Sonar Results** : *mvnw.cmd clean install sonar:sonar -Dsonar.projectKey={projectKey}  -Dsonar.organization={organization}  -Dsonar.host.url={host}  -Dsonar.login={login}*
 
