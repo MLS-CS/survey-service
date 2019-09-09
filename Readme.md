@@ -12,6 +12,151 @@ This service provides apis to manage survey and support following features :
 
 **API Documentation** http://localhost:8081/api/swagger-ui.html
 
+**API Usage (via Postman)**
+  * Create Survey 
+    * Request URL : http://localhost:8081/api/survey
+    * Request Body:
+       ```
+       {
+        "name": "Java",
+        "description": "Java Survey"
+       }
+       ```
+    * Response Header:
+       ```
+       Location : http://localhost:8081/api/survey/{surveyId}  
+       ```
+    * Response Status:
+       ```
+        201
+       ```             
+  
+  * Update Survey 
+    * Request URL : http://localhost:8081/api/survey/{surveyId}
+    * Request Body:
+        ```
+        {
+           "name": "Java",
+           "description": "Java Survey"
+        }
+        ```
+    * Response Status:
+      ```
+      200
+      ```  
+          
+   * Retrieve Survey 
+       * Request URL : http://localhost:8081/api/survey/{surveyId}
+       * Response Body:
+          ```
+          {
+           "name": "Java",
+           "description": "Java Survey"
+          }
+          ```
+          
+   * Delete Survey 
+        * Request URL : http://localhost:8081/api/survey/{surveyId}
+        * Response Status:
+          ```
+          200
+          ```
+             
+   * Create Question 
+     * Request URL : http://localhost:8082/api/survey/{surveyId}/question
+     * Request Body:
+         ```
+         {
+          "category": "Basic",
+          "description": "Is Java your favorite language"
+         }
+         ```
+     * Response Header:
+         ```
+         Location : http://localhost:8082/api/survey/{surveyId}/question/{questionId}  
+         ```
+     * Response Status:
+         ```
+          201
+         ```      
+                
+   * Update Question 
+      * Request URL : http://localhost:8082/api/survey/{surveyId}/question/{questionId} 
+      * Request Body:
+          ```
+          {
+              "category": "Basic",
+              "description": "Is Java your favorite language"
+          }
+          ```
+      * Response Status:
+        ```
+        200
+        ```  
+            
+    * Retrieve Question 
+      * Request URL : http://localhost:8082/api/survey/{surveyId}/question/{questionId}
+      * Response Body:
+         ```
+         {
+             "category": "Basic",
+             "description": "Is Java your favorite language"
+         }
+         ```
+            
+    * Delete Question 
+       * Request URL : http://localhost:8082/api/survey/{surveyId}/question/{questionId}
+       * Response Status:
+         ```
+         200
+         ```
+         
+    * Create Answer 
+      * Request URL : http://localhost:8082/api/survey/{surveyId}/question/{questionId}/answer
+      * Request Body:
+          ```
+          {
+             "description": "Yes"
+          }
+          ```
+       * Response Header:
+            ```
+            Location : http://localhost:8082/api/survey/{surveyId}/question/{questionId}/answer/{answerId}
+            ```
+       * Response Status:
+            ```
+             201
+            ```      
+                   
+     * Update Answer 
+       * Request URL : http://localhost:8082/api/survey/{surveyId}/question/{questionId}/answer/{answerId} 
+       * Request Body:
+           ```
+           {
+               "description": "Yes"
+           }
+           ```
+        * Response Status:
+           ```
+           200
+           ```  
+               
+     * Retrieve Answer 
+       * Request URL : http://localhost:8082/api/survey/{surveyId}/question/{questionId}/answer/{answerId}
+       * Response Body:
+          ```
+          {
+              "description": "Yes"
+          }
+          ```
+               
+     * Delete Answer 
+       * Request URL : http://localhost:8082/api/survey/{surveyId}/question/{questionId}/answer/{answerId}
+       * Response Status:
+          ```
+           200
+          ```
+          
 **Publish Sonar Results** : *mvnw.cmd clean install sonar:sonar -Dsonar.projectKey={projectKey}  -Dsonar.organization={organization}  -Dsonar.host.url={host}  -Dsonar.login={login}*
 
 **Build Docker Container** : *mvnw.cmd clean install dockerfile:build*
