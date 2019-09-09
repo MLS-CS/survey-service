@@ -94,9 +94,9 @@ This service provides apis to manage survey and support following features :
         200
         ```  
             
-    * Retrieve Question 
-      * Request URL : http://localhost:8082/api/survey/{surveyId}/question/{questionId}
-      * Response Body:
+   * Retrieve Question 
+     * Request URL : http://localhost:8082/api/survey/{surveyId}/question/{questionId}
+     * Response Body:
          ```
          {
              "category": "Basic",
@@ -104,9 +104,9 @@ This service provides apis to manage survey and support following features :
          }
          ```
             
-    * Delete Question 
-       * Request URL : http://localhost:8082/api/survey/{surveyId}/question/{questionId}
-       * Response Status:
+   * Delete Question 
+     * Request URL : http://localhost:8082/api/survey/{surveyId}/question/{questionId}
+     * Response Status:
          ```
          200
          ```
@@ -128,31 +128,31 @@ This service provides apis to manage survey and support following features :
              201
             ```      
                    
-     * Update Answer 
-       * Request URL : http://localhost:8082/api/survey/{surveyId}/question/{questionId}/answer/{answerId} 
-       * Request Body:
+    * Update Answer 
+      * Request URL : http://localhost:8082/api/survey/{surveyId}/question/{questionId}/answer/{answerId} 
+      * Request Body:
            ```
            {
                "description": "Yes"
            }
            ```
-        * Response Status:
+       * Response Status:
            ```
            200
            ```  
                
-     * Retrieve Answer 
-       * Request URL : http://localhost:8082/api/survey/{surveyId}/question/{questionId}/answer/{answerId}
-       * Response Body:
+    * Retrieve Answer 
+      * Request URL : http://localhost:8082/api/survey/{surveyId}/question/{questionId}/answer/{answerId}
+      * Response Body:
           ```
           {
               "description": "Yes"
           }
           ```
                
-     * Delete Answer 
-       * Request URL : http://localhost:8082/api/survey/{surveyId}/question/{questionId}/answer/{answerId}
-       * Response Status:
+    * Delete Answer 
+      * Request URL : http://localhost:8082/api/survey/{surveyId}/question/{questionId}/answer/{answerId}
+      * Response Status:
           ```
            200
           ```
